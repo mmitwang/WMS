@@ -76,6 +76,12 @@ const routes = [
     name: 'InventoryVisualizationManagement',
     component: () => import('../views/InventoryVisualizationManagement.vue'),
     meta: { title: '库存可视化管理', icon: 'DataBoard' }
+  },
+  {
+    path: '/electrical-components',
+    name: 'ElectricalComponentManagement',
+    component: () => import('../views/ElectricalComponentManagement.vue'),
+    meta: { title: '腾腾电气元器件', icon: 'Lightning' }
   }
 ]
 
