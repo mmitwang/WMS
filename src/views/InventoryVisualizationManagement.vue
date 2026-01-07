@@ -259,7 +259,7 @@
                         :key="index"
                         class="recommendation-item"
                       >
-                        <el-icon><Lightbulb /></el-icon>
+                        <el-icon><Sunny /></el-icon>
                         <span>{{ recommendation }}</span>
                       </div>
                     </div>
@@ -367,7 +367,7 @@
                   :key="index"
                   class="recommendation-card"
                 >
-                  <el-icon><Lightbulb /></el-icon>
+                  <el-icon><Sunny /></el-icon>
                   <span>{{ recommendation }}</span>
                 </div>
               </div>
@@ -705,7 +705,7 @@ import {
   Check,
   Box,
   TrendCharts,
-  Lightbulb
+  Sunny
 } from '@element-plus/icons-vue'
 import * as echarts from 'echarts'
 import inventoryVisualizationService from '@/services/inventoryVisualizationService'
@@ -720,7 +720,7 @@ export default {
     Check,
     Box,
     TrendCharts,
-    Lightbulb
+    Sunny
   },
   setup() {
     // 响应式数据

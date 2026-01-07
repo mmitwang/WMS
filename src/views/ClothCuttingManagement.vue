@@ -8,7 +8,7 @@
           卷材领用
         </el-button>
         <el-button type="success" @click="showCuttingDialog = true">
-          <el-icon><Scissors /></el-icon>
+          <el-icon><Edit /></el-icon>
           裁剪记录
         </el-button>
       </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-icon">
-          <el-icon><Scissors /></el-icon>
+          <el-icon><Edit /></el-icon>
         </div>
         <div class="stat-content">
           <div class="stat-value">{{ stats.totalCuttings }}</div>
@@ -313,7 +313,7 @@
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { Download, Scissors, Box, RefreshRight, TrendCharts } from '@element-plus/icons-vue'
+import { Download, Edit, Box, RefreshRight, TrendCharts } from '@element-plus/icons-vue'
 import { cuttingService } from '../services/cuttingService'
 
 // 响应式数据

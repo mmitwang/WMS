@@ -38,7 +38,7 @@
 
     <!-- 卷材列表 -->
     <div class="cloth-table">
-      <el-table :data="clothList" class="cyber-table" stripe v-loading="loading">
+      <el-table :data="clothList" class="cyber-table" stripe v-loading="loading" @selection-change="handleSelectionChange">
         <el-table-column type="selection" width="55" />
         <el-table-column prop="code" label="卷材编码" width="200" />
         <el-table-column prop="material" label="材质" width="80" />
@@ -217,11 +217,10 @@ const addRules = {
   quantity: [{ required: true, message: '请输入到货数量', trigger: 'blur' }]
 }
 
-// 计算属性
-const selectedRows = computed(() => {
-  // 这里应该绑定表格的选中行
-  return []
-})
+// 表格选择处理
+const handleSelectionChange = (selection) => {
+  selectedRows.value = selection
+}
 
 // 方法
 const generateCode = () => {
