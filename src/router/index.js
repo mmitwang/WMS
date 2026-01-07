@@ -30,6 +30,12 @@ const routes = [
     meta: { title: '严牌滤布卷材', icon: 'Grid' }
   },
   {
+    path: '/cloth-cutting',
+    name: 'ClothCuttingManagement',
+    component: () => import('../views/ClothCuttingManagement.vue'),
+    meta: { title: '卷材裁剪管理', icon: 'ScaleToOriginal' }
+  },
+  {
     path: '/inbound',
     name: 'InboundManagement',
     component: () => import('../views/InboundManagement.vue'),
