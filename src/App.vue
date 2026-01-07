@@ -135,6 +135,7 @@ const menuRoutes = computed(() => {
     { name: 'Dashboard', path: '/dashboard', meta: { title: '数据仪表盘', icon: 'DataAnalysis' } },
     { name: 'WarehouseManagement', path: '/warehouse', meta: { title: '库区管理', icon: 'House' } },
     { name: 'InventoryMonitoring', path: '/inventory', meta: { title: '库存监控', icon: 'Monitor' } },
+    { name: 'FilterClothManagement', path: '/filter-cloth', meta: { title: '严牌滤布卷材', icon: 'Grid' } },
     { name: 'InboundManagement', path: '/inbound', meta: { title: '入库管理', icon: 'Download' } },
     { name: 'OutboundManagement', path: '/outbound', meta: { title: '出库管理', icon: 'Upload' } },
     { name: 'StockTransfer', path: '/transfer', meta: { title: '库存调拨', icon: 'Switch' } },

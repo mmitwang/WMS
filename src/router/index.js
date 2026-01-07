@@ -24,6 +24,12 @@ const routes = [
     meta: { title: '库存监控', icon: 'Monitor' }
   },
   {
+    path: '/filter-cloth',
+    name: 'FilterClothManagement',
+    component: () => import('../views/FilterClothManagement.vue'),
+    meta: { title: '严牌滤布卷材', icon: 'Grid' }
+  },
+  {
     path: '/inbound',
     name: 'InboundManagement',
     component: () => import('../views/InboundManagement.vue'),
