@@ -42,6 +42,12 @@ const routes = [
     meta: { title: '环境监控', icon: 'Sunny' }
   },
   {
+    path: '/outbound-picking',
+    name: 'OutboundPickingManagement',
+    component: () => import('../views/OutboundPickingManagement.vue'),
+    meta: { title: '出库拣选管理', icon: 'Operation' }
+  },
+  {
     path: '/inbound',
     name: 'InboundManagement',
     component: () => import('../views/InboundManagement.vue'),
@@ -66,10 +72,10 @@ const routes = [
     meta: { title: '盘点管理', icon: 'DocumentChecked' }
   },
   {
-    path: '/report',
-    name: 'ReportAnalysis',
-    component: () => import('../views/ReportAnalysis.vue'),
-    meta: { title: '报表分析', icon: 'PieChart' }
+    path: '/inventory-visualization',
+    name: 'InventoryVisualizationManagement',
+    component: () => import('../views/InventoryVisualizationManagement.vue'),
+    meta: { title: '库存可视化管理', icon: 'DataBoard' }
   }
 ]
 
