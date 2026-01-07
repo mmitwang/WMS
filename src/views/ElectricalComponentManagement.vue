@@ -1065,12 +1065,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/electrical-tech-theme.scss';
+@import '../styles/glassmorphism-business-theme.scss';
 
 .electrical-component-management {
   min-height: 100vh;
   padding: 20px;
   position: relative;
+  background: rgba(10, 22, 40, 0.95);
   
   .page-header {
     display: flex;
@@ -1078,11 +1079,16 @@ export default {
     align-items: center;
     padding: 30px;
     margin-bottom: 20px;
+    background: rgba(10, 22, 40, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(114, 46, 209, 0.2);
     
     .header-content {
       h1 {
         font-size: 28px;
         margin-bottom: 8px;
+        color: #ffffff;
       }
       
       .subtitle {
@@ -1117,9 +1123,11 @@ export default {
   
   .electric-tabs {
     :deep(.el-tabs__header) {
-      background: var(--bg-secondary);
+      background: rgba(10, 22, 40, 0.85);
+      backdrop-filter: blur(10px);
       border-radius: 12px 12px 0 0;
       padding: 0 20px;
+      border: 1px solid rgba(114, 46, 209, 0.2);
       
       .el-tabs__nav-wrap {
         &::after {
@@ -1150,11 +1158,19 @@ export default {
     padding: 30px;
     margin-top: -1px;
     border-radius: 0 0 16px 16px;
+    background: rgba(10, 22, 40, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(114, 46, 209, 0.2);
+    border-top: none;
   }
   
   .search-filters {
     padding: 20px;
     margin-bottom: 20px;
+    background: rgba(10, 22, 40, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(114, 46, 209, 0.15);
     
     .filter-row {
       display: flex;
@@ -1164,15 +1180,81 @@ export default {
       .search-input {
         flex: 1;
         max-width: 400px;
+        
+        :deep(.el-input__wrapper) {
+          background: rgba(10, 22, 40, 0.9);
+          border: 1px solid rgba(114, 46, 209, 0.3);
+          
+          .el-input__inner {
+            color: #ffffff;
+            
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
       }
       
       .filter-select {
         width: 150px;
+        
+        :deep(.el-select__wrapper) {
+          background: rgba(10, 22, 40, 0.9);
+          border: 1px solid rgba(114, 46, 209, 0.3);
+          
+          .el-select__placeholder {
+            color: rgba(255, 255, 255, 0.5);
+          }
+          
+          .el-select__selected-item {
+            color: #ffffff;
+          }
+        }
       }
     }
   }
   
   .component-table {
+    background: rgba(10, 22, 40, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(114, 46, 209, 0.2);
+    padding: 20px;
+    
+    :deep(.el-table) {
+      background: transparent;
+      
+      .el-table__header {
+        background: rgba(10, 22, 40, 0.9);
+        
+        th {
+          background: transparent;
+          color: #ffffff;
+          border-bottom: 1px solid rgba(114, 46, 209, 0.3);
+        }
+      }
+      
+      .el-table__body {
+        tr {
+          background: transparent;
+          
+          &:hover {
+            background: rgba(114, 46, 209, 0.1) !important;
+          }
+          
+          td {
+            background: transparent;
+            color: #ffffff;
+            border-bottom: 1px solid rgba(114, 46, 209, 0.15);
+          }
+        }
+        
+        .el-table__row--striped {
+          background: rgba(114, 46, 209, 0.05);
+        }
+      }
+    }
+    
     .component-id {
       font-family: 'Courier New', monospace;
       color: var(--electric-glow);
@@ -1183,6 +1265,7 @@ export default {
       strong {
         display: block;
         margin-bottom: 4px;
+        color: #ffffff;
       }
       
       .model {
@@ -1203,10 +1286,11 @@ export default {
     
     .location-code {
       font-family: 'Courier New', monospace;
-      background: var(--bg-secondary);
+      background: rgba(114, 46, 209, 0.2);
       padding: 2px 6px;
       border-radius: 4px;
       font-size: 12px;
+      color: #ffffff;
     }
     
     .no-esd {
@@ -1217,6 +1301,33 @@ export default {
       display: flex;
       justify-content: center;
       margin-top: 30px;
+      
+      :deep(.el-pagination) {
+        .el-pager li {
+          background: rgba(10, 22, 40, 0.8);
+          color: #ffffff;
+          border: 1px solid rgba(114, 46, 209, 0.3);
+          
+          &.is-active {
+            background: var(--electric-glow);
+            color: #000000;
+          }
+        }
+        
+        .btn-prev, .btn-next {
+          background: rgba(10, 22, 40, 0.8);
+          color: #ffffff;
+          border: 1px solid rgba(114, 46, 209, 0.3);
+        }
+        
+        .el-select {
+          .el-select__wrapper {
+            background: rgba(10, 22, 40, 0.8);
+            border: 1px solid rgba(114, 46, 209, 0.3);
+            color: #ffffff;
+          }
+        }
+      }
     }
   }
   
@@ -1225,13 +1336,27 @@ export default {
     
     .warehouse-controls {
       margin-bottom: 20px;
+      
+      :deep(.el-button-group) {
+        .el-button {
+          background: rgba(10, 22, 40, 0.8);
+          border: 1px solid rgba(114, 46, 209, 0.3);
+          color: #ffffff;
+          
+          &:hover {
+            background: rgba(114, 46, 209, 0.3);
+          }
+        }
+      }
     }
     
     .warehouse-3d-scene {
       width: 100%;
       height: 600px;
-      background: var(--bg-secondary);
+      background: rgba(10, 22, 40, 0.9);
+      backdrop-filter: blur(10px);
       border-radius: 12px;
+      border: 1px solid rgba(114, 46, 209, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1245,6 +1370,10 @@ export default {
       right: 20px;
       padding: 15px;
       width: 200px;
+      background: rgba(10, 22, 40, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border: 1px solid rgba(114, 46, 209, 0.2);
       
       h4 {
         margin-bottom: 10px;
@@ -1280,6 +1409,10 @@ export default {
     
     .chart-card {
       padding: 20px;
+      background: rgba(10, 22, 40, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(114, 46, 209, 0.2);
       
       &.full-width {
         grid-column: 1 / -1;
@@ -1306,6 +1439,19 @@ export default {
     .trace-input {
       flex: 1;
       max-width: 500px;
+      
+      :deep(.el-input__wrapper) {
+        background: rgba(10, 22, 40, 0.9);
+        border: 1px solid rgba(114, 46, 209, 0.3);
+        
+        .el-input__inner {
+          color: #ffffff;
+          
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
     }
   }
   
@@ -1315,9 +1461,27 @@ export default {
     gap: 30px;
     
     .trace-timeline {
+      background: rgba(10, 22, 40, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      border: 1px solid rgba(114, 46, 209, 0.2);
+      padding: 20px;
+      
       h3 {
         margin-bottom: 20px;
         color: var(--text-primary);
+      }
+      
+      :deep(.el-timeline) {
+        .el-timeline-item__wrapper {
+          .el-timeline-item__content {
+            color: #ffffff;
+          }
+          
+          .el-timeline-item__timestamp {
+            color: var(--text-secondary);
+          }
+        }
       }
       
       .timeline-content {
@@ -1338,6 +1502,10 @@ export default {
       .detail-card {
         padding: 20px;
         margin-bottom: 15px;
+        background: rgba(10, 22, 40, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        border: 1px solid rgba(114, 46, 209, 0.2);
         
         h4 {
           margin-bottom: 15px;
@@ -1366,6 +1534,32 @@ export default {
     }
   }
   
+  // 弹窗样式优化
+  :deep(.el-dialog) {
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(114, 46, 209, 0.3);
+    
+    .el-dialog__header {
+      background: rgba(10, 22, 40, 0.9);
+      border-bottom: 1px solid rgba(114, 46, 209, 0.2);
+      
+      .el-dialog__title {
+        color: #ffffff;
+      }
+    }
+    
+    .el-dialog__body {
+      background: rgba(10, 22, 40, 0.85);
+      color: #ffffff;
+    }
+    
+    .el-dialog__footer {
+      background: rgba(10, 22, 40, 0.9);
+      border-top: 1px solid rgba(114, 46, 209, 0.2);
+    }
+  }
+  
   .component-detail {
     .detail-header {
       display: flex;
@@ -1383,6 +1577,28 @@ export default {
       }
     }
     
+    :deep(.el-tabs) {
+      .el-tabs__header {
+        background: rgba(10, 22, 40, 0.8);
+        border-radius: 8px;
+        
+        .el-tabs__item {
+          color: var(--text-secondary);
+          
+          &.is-active {
+            color: var(--electric-glow);
+          }
+        }
+      }
+      
+      .el-tabs__content {
+        background: rgba(10, 22, 40, 0.6);
+        border-radius: 8px;
+        padding: 20px;
+        margin-top: 10px;
+      }
+    }
+    
     .basic-info-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1392,7 +1608,7 @@ export default {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
-        border-bottom: 1px solid var(--border-primary);
+        border-bottom: 1px solid rgba(114, 46, 209, 0.2);
         
         label {
           color: var(--text-secondary);
@@ -1410,7 +1626,7 @@ export default {
         display: flex;
         justify-content: space-between;
         padding: 15px 0;
-        border-bottom: 1px solid var(--border-primary);
+        border-bottom: 1px solid rgba(114, 46, 209, 0.2);
         
         label {
           color: var(--text-secondary);
@@ -1433,6 +1649,60 @@ export default {
         label {
           color: var(--text-secondary);
           font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  // 表单样式优化
+  :deep(.el-form) {
+    .el-form-item__label {
+      color: #ffffff;
+    }
+    
+    .el-input__wrapper {
+      background: rgba(10, 22, 40, 0.8);
+      border: 1px solid rgba(114, 46, 209, 0.3);
+      
+      .el-input__inner {
+        color: #ffffff;
+        
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+    
+    .el-select__wrapper {
+      background: rgba(10, 22, 40, 0.8);
+      border: 1px solid rgba(114, 46, 209, 0.3);
+      
+      .el-select__placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+      .el-select__selected-item {
+        color: #ffffff;
+      }
+    }
+    
+    .el-input-number {
+      .el-input__wrapper {
+        background: rgba(10, 22, 40, 0.8);
+        border: 1px solid rgba(114, 46, 209, 0.3);
+        
+        .el-input__inner {
+          color: #ffffff;
+        }
+      }
+    }
+    
+    .el-switch {
+      .el-switch__core {
+        background: rgba(114, 46, 209, 0.3);
+        
+        &.is-checked {
+          background: var(--electric-glow);
         }
       }
     }

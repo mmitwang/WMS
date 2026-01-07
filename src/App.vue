@@ -13,7 +13,7 @@
       <div class="sidebar-header">
         <div class="logo">
           <el-icon class="logo-icon"><DataAnalysis /></el-icon>
-          <span v-show="!appStore.sidebarCollapsed" class="logo-text">WMS系统</span>
+          <span v-show="!appStore.sidebarCollapsed" class="logo-text">腾腾电气WMS</span>
         </div>
         <el-button 
           class="collapse-btn"
@@ -129,23 +129,13 @@ let timeInterval = null
 // 粒子系统实例
 let particleSystem = null
 
-// 菜单路由
+// 菜单路由 - PLM风格电气行业专用
 const menuRoutes = computed(() => {
   return [
-    { name: 'Dashboard', path: '/dashboard', meta: { title: '数据仪表盘', icon: 'DataAnalysis' } },
-    { name: 'WarehouseManagement', path: '/warehouse', meta: { title: '库区管理', icon: 'House' } },
-    { name: 'InventoryMonitoring', path: '/inventory', meta: { title: '库存监控', icon: 'Monitor' } },
-    { name: 'FilterClothManagement', path: '/filter-cloth', meta: { title: '严牌滤布卷材', icon: 'Grid' } },
-    { name: 'ClothCuttingManagement', path: '/cloth-cutting', meta: { title: '卷材裁剪管理', icon: 'ScaleToOriginal' } },
-    { name: 'EnvironmentMonitoring', path: '/environment-monitoring', meta: { title: '环境监控', icon: 'Sunny' } },
-    { name: 'OutboundPickingManagement', path: '/outbound-picking', meta: { title: '出库拣选管理', icon: 'Operation' } },
-    { name: 'InventoryVisualizationManagement', path: '/inventory-visualization', meta: { title: '库存可视化管理', icon: 'DataBoard' } },
-    { name: 'InboundManagement', path: '/inbound', meta: { title: '入库管理', icon: 'Download' } },
-    { name: 'OutboundManagement', path: '/outbound', meta: { title: '出库管理', icon: 'Upload' } },
-    { name: 'StockTransfer', path: '/transfer', meta: { title: '库存调拨', icon: 'Switch' } },
-    { name: 'InventoryCount', path: '/count', meta: { title: '盘点管理', icon: 'DocumentChecked' } },
-    { name: 'ReportAnalysis', path: '/report', meta: { title: '报表分析', icon: 'PieChart' } },
-    { name: 'SystemSettings', path: '/settings', meta: { title: '系统设置', icon: 'Setting' } }
+    { name: 'Dashboard', path: '/dashboard', meta: { title: '腾腾电气仪表盘', icon: 'DataAnalysis' } },
+    { name: 'ElectricalComponentManagement', path: '/electrical-components', meta: { title: '电气元器件管理', icon: 'Lightning' } },
+    { name: 'ElectricalWarehouseManagement', path: '/electrical-warehouse', meta: { title: '电气仓储管理', icon: 'House' } },
+    { name: 'ElectricalInventoryMonitoring', path: '/electrical-inventory', meta: { title: '电气库存监控', icon: 'Monitor' } }
   ]
 })
 
