@@ -181,6 +181,8 @@ const initCharts = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .dashboard {
   .stats-grid {
     display: grid;

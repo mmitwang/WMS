@@ -139,6 +139,8 @@ const saveWarehouse = () => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .warehouse-management {
   .page-header {
     display: flex;

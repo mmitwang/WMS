@@ -164,6 +164,8 @@ const viewDetails = (row) => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .inventory-monitoring {
   .page-header {
     display: flex;

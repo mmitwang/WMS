@@ -97,6 +97,8 @@ const getStatusText = (status) => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .inbound-management {
   .page-header {
     display: flex;

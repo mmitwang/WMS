@@ -657,6 +657,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/variables.scss';
+
 .report-analysis {
   padding: 20px;
   background: var(--bg-primary);
@@ -943,3 +945,4 @@ onMounted(() => {
     }
   }
 }
+</style>

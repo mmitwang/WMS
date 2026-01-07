@@ -150,10 +150,11 @@ const currentPageTitle = computed(() => {
   return currentRoute ? currentRoute.meta.title : '仓储管理系统'
 })
 
-onMounted(() => {
+onMounted(async () => {
   // 初始化粒子背景
   if (particleCanvas.value) {
-    particleSystem = new (await import('./utils/particles')).ParticleSystem(particleCanvas.value, {
+    const { ParticleSystem } = await import('./utils/particles')
+    particleSystem = new ParticleSystem(particleCanvas.value, {
       particleCount: 30,
       particleSize: 1.5,
       particleSpeed: 0.3,
@@ -186,6 +187,8 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
+@import './styles/variables.scss';
+
 .cyber-app {
   height: 100vh;
   display: flex;
