@@ -36,6 +36,12 @@ const routes = [
     meta: { title: '卷材裁剪管理', icon: 'ScaleToOriginal' }
   },
   {
+    path: '/environment-monitoring',
+    name: 'EnvironmentMonitoring',
+    component: () => import('../views/EnvironmentMonitoring.vue'),
+    meta: { title: '环境监控', icon: 'Sunny' }
+  },
+  {
     path: '/inbound',
     name: 'InboundManagement',
     component: () => import('../views/InboundManagement.vue'),
@@ -64,12 +70,6 @@ const routes = [
     name: 'ReportAnalysis',
     component: () => import('../views/ReportAnalysis.vue'),
     meta: { title: '报表分析', icon: 'PieChart' }
-  },
-  {
-    path: '/settings',
-    name: 'SystemSettings',
-    component: () => import('../views/SystemSettings.vue'),
-    meta: { title: '系统设置', icon: 'Setting' }
   }
 ]
 
